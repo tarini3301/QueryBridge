@@ -1,0 +1,6 @@
+
+{
+  "name": "Query Bridge",
+  "description": "A Natural Language Processing application that converts user input in natural language into SQL queries for a placement dataset, simulates the query results, and explains the generated SQL.",
+  "requestFramePermissions": []
+}
