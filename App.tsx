@@ -1,19 +1,18 @@
 
-import React, { useState, useCallback, useEffect } from 'react';
 import { GoogleGenAI } from "@google/genai";
+import React, { useCallback, useEffect, useState } from 'react';
+import { DataInput } from './components/DataInput';
+import { ErrorMessage } from './components/ErrorMessage';
 import { QueryInput } from './components/QueryInput';
-import { SqlDisplay } from './components/SqlDisplay';
 import { ResultsDisplay } from './components/ResultsDisplay';
 import { SchemaDisplay } from './components/SchemaDisplay';
-import { LoadingSpinner } from './components/LoadingSpinner';
-import { ErrorMessage } from './components/ErrorMessage';
+import { SqlDisplay } from './components/SqlDisplay';
 import { SqlExplanationDisplay } from './components/SqlExplanationDisplay';
-import { DataInput } from './components/DataInput';
-import { generateSqlFromNaturalLanguage, explainSqlStatement } from './services/geminiService';
-import * as dbService from './services/dbService';
+import { PLACEMENT_SCHEMA_STRING, SAMPLE_CSV_DATA, SAMPLE_QUERIES, TABLE_NAME } from './constants';
 import type { RawTableColumnInfo } from './services/dbService';
-import { PLACEMENT_SCHEMA_STRING, SAMPLE_QUERIES, SAMPLE_CSV_DATA, TABLE_NAME, GEMINI_MODEL_NAME } from './constants';
-import type { SampleQuery, QueryResultItem, SqlJsDatabase } from './types';
+import * as dbService from './services/dbService';
+import { explainSqlStatement, generateSqlFromNaturalLanguage } from './services/geminiService';
+import type { QueryResultItem, SampleQuery, SqlJsDatabase } from './types';
 
 const API_KEY = process.env.API_KEY;
 
@@ -403,7 +402,7 @@ const App: React.FC = () => {
         </div>
       </div>
       <footer className="w-full max-w-6xl mt-12 text-center text-slate-500 text-sm">
-        <p>&copy; {new Date().getFullYear()} Query Bridge. Powered by Gemini & SQL.js.</p>
+        <p>&copy; {new Date().getFullYear()} Query Bridge.</p>
       </footer>
     </div>
   );
