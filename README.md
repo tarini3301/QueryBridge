@@ -21,7 +21,7 @@ Query Bridge is a local-first web app that allows users to:
 This guide helps you run the app locally on your machine.
 
 ## 📸 Screenshot
-![QueryBridge](![Screenshot 2025-06-24 202218](https://github.com/user-attachments/assets/a8ef9013-e361-4243-be97-1baa2f546bfc)
+(![Screenshot 2025-06-24 202218](https://github.com/user-attachments/assets/a8ef9013-e361-4243-be97-1baa2f546bfc)
 )
 
 ### ✅ Prerequisites
